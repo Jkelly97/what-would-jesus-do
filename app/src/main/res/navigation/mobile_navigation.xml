@@ -22,4 +22,6 @@
     android:label="@string/menu_slideshow"
     android:name="edu.cnm.deepdive.whatwouldjesusdo.ui.slideshow.SlideshowFragment"
     tools:layout="@layout/fragment_slideshow"/>
+
+
 </navigation>
