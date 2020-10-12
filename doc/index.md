@@ -61,4 +61,4 @@ Users will be able to fit reading the bible into their normal lives while workin
 
 ## Wireframe
 
-![Wireframe diagram](img/whatwouldjesusdo.png)
+![Wireframe diagram](img/whatwouldjesusdo.png).
