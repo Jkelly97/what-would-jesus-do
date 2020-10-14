@@ -8,19 +8,19 @@
   <fragment
     android:id="@+id/nav_home"
     android:label="@string/menu_home"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.ui.home.HomeFragment"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.home.HomeFragment"
     tools:layout="@layout/fragment_home"/>
 
   <fragment
     android:id="@+id/nav_gallery"
     android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.ui.gallery.GalleryFragment"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.gallery.GalleryFragment"
     tools:layout="@layout/fragment_gallery"/>
 
   <fragment
     android:id="@+id/nav_slideshow"
     android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.ui.slideshow.SlideshowFragment"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.slideshow.SlideshowFragment"
     tools:layout="@layout/fragment_slideshow"/>
 
 

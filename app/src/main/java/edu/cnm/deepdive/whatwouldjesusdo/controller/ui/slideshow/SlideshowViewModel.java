@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.whatwouldjesusdo.ui.slideshow;
+package edu.cnm.deepdive.whatwouldjesusdo.controller.ui.slideshow;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
