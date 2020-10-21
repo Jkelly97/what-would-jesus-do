@@ -4,6 +4,11 @@ This application will feature the KJV Bible, along with many others, and the abi
 This may include words that may not be in the text itself but merely associated with specified verses.
 Users will be able to fit reading the bible into their normal lives while working around time restraints.
 
+* The ability to pull the KJV Bible to the application to read.
+* The ability to navigate through the Bible at will.
+* The to search to passages based on key words.
+* The ability to save specific passages as "favorites."
+
 ## Intended users
 
 * Christians who may be struggling with their faith.
