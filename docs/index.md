@@ -20,11 +20,11 @@ Users will be able to fit reading the bible into their normal lives while workin
 ## Functionality
 
 * There will be a drop down search menu with top searches along with a "favorites" / search history.
-* This drop down menu will also take give data to the cloud and ranking top searches to give suugestions to other users.
+* This drop down menu will also take give data to the cloud and ranking top searches to give suggestions to other users.
 * This app will compile and feature common and most popular searches to other users.
 * They will be able to save their favorite passages to make reading them a sinch.
 * Add notifications for a daily bible verse or reminding users to read a passage each day.
-* Add a fucntion to search for near by churches to attend.
+* Add a function to search for nearby churches to attend.
 
 
 ## Persistent data
@@ -35,7 +35,7 @@ Users will be able to fit reading the bible into their normal lives while workin
     
 ## Device/external services
 
-* Using a API Bible web service of sorts I will be able to connect users to their prefered version of the Bible.
+* Using a API Bible web service of sorts I will be able to connect users to their preferred version of the Bible.
 
 > This webservice will provide the passages and different versions of the Bible. 
 > without the service the application will be unable to run.
@@ -44,13 +44,13 @@ Users will be able to fit reading the bible into their normal lives while workin
 * Using a form of user account service to store favorite passages and recent searches
 
 > This api will be used to provide users with accounts. In doing so they will be provided with the ability to save searches, passages and searches of churches.
-> Yes the application will be usable with out the help of this api.
+> Yes the application will be usable without the help of this api.
 >https://developers.google.com/admin-sdk/directory/v1/guides/manage-users
 
-* Using google maps to search for near by churches.
+* Using google maps to search for nearby churches.
 
-> This service will be used to pull up a map with churches in the urrounding area.
-> Yes the application should be able to perform woth out the service.
+> This service will be used to pull up a map with churches in the surrounding area.
+> Yes the application should be able to perform without the service.
 > https://developers.google.com/places/web-service/search
 
 ## Stretch goals/possible enhancements 
