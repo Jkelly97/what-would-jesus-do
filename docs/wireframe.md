@@ -1,0 +1,3 @@
+## Wireframe diagram
+
+![Wireframe diagram](img/whatwouldjesusdo.png)...

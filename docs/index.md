@@ -48,7 +48,7 @@ Users will be able to fit reading the bible into their normal lives while workin
 
 * Using a form of user account service to store favorite passages and recent searches
 
-> This api will be used to provide users with accounts. In doing so they will be provided with the ability to save searches, passages and searches of churches.
+> This api will be used to provide users with accounts. By creating an account they will be provided with the ability to save searches, passages and searches of churches.
 > Yes the application will be usable without the help of this api.
 >https://developers.google.com/admin-sdk/directory/v1/guides/manage-users
 
@@ -64,6 +64,7 @@ Users will be able to fit reading the bible into their normal lives while workin
 * Add in videos of sermons for people to watch in a related search.
 * There will also be multiple languages to allow users who do not speak English the ability to use the application.
 
-## Wireframe
+## [Wireframe](wireframe.md)
 
-![Wireframe diagram](img/whatwouldjesusdo.png)...
+
+## [Entity Relationship Diagram](erd.md)
