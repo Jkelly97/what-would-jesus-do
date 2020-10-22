@@ -42,7 +42,7 @@ Users will be able to fit reading the bible into their normal lives while workin
 
 * Using a API Bible web service of sorts I will be able to connect users to their preferred version of the Bible.
 
-> This webservice will provide the passages and different versions of the Bible. 
+> This webservice will provide the passages and different versions of the Bible. This service provides 2500+ versions of the Bible in 1600+ languages.
 > without the service the application will be unable to run.
 >  https://docs.api.bible/
 
