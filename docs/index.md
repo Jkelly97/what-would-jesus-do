@@ -43,26 +43,26 @@ Users will be able to fit reading the bible into their normal lives while workin
 * Using a API Bible web service of sorts I will be able to connect users to their preferred version of the Bible.
 
 > This webservice will provide the passages and different versions of the Bible. This service provides 2500+ versions of the Bible in 1600+ languages.
-> without the service the application will be unable to run.
+> Without the service the application will not be able to access any version of the bible and therefor be unable to run.
 >  https://docs.api.bible/
 
 * Using a form of user account service to store favorite passages and recent searches
 
 > This api will be used to provide users with accounts. By creating an account they will be provided with the ability to save searches, passages and searches of churches.
-> Yes the application will be usable without the help of this api.
+> Yes, the application will be usable without the help of this api.  Without this service users can still access the versions of the bible.
 >https://developers.google.com/admin-sdk/directory/v1/guides/manage-users
 
 * Using google maps to search for nearby churches.
 
-> This service will be used to pull up a map with churches in the surrounding area.
+> This service will be used to pull up a map with churches in the surrounding area. This will allow users to find suitable churches after moving or even just while traveling. 
 > Yes the application should be able to perform without the service.
 > https://developers.google.com/places/web-service/search
 
 ## Stretch goals/possible enhancements 
 
-* The future goal with this application would be to add many versions of the Bible.
-* Add in videos of sermons for people to watch in a related search.
-* There will also be multiple languages to allow users who do not speak English the ability to use the application.
+* The future goal with this application would be to add many versions of the Bible using the API Bible service.
+* Add in videos of sermons for people to watch. Using the related search bar users will be able to find these videos.
+* There will also be multiple languages to allow users who do not speak English the ability to use the application.  This will also be possible using the API BIble service.
 
 ## [Wireframe](wireframe.md)
 
