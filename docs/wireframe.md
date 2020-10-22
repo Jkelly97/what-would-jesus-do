@@ -1,3 +1,3 @@
 ## Wireframe diagram
 
-![Wireframe diagram](img/wireframe.png)...
+![Wireframe diagram](img/wireframe.png)
