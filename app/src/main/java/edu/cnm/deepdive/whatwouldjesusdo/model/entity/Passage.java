@@ -34,4 +34,44 @@ public class Passage {
   @NonNull
   @ColumnInfo(name = "user_id")
   private long userId;
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public String getBook() {
+    return book;
+  }
+
+  public void setBook(String book) {
+    this.book = book;
+  }
+
+  public int getChapter() {
+    return chapter;
+  }
+
+  public void setChapter(int chapter) {
+    this.chapter = chapter;
+  }
+
+  public int getVerse() {
+    return verse;
+  }
+
+  public void setVerse(int verse) {
+    this.verse = verse;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
 }
