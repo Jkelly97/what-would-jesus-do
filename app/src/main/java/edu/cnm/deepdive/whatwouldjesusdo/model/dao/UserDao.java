@@ -10,6 +10,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
 import edu.cnm.deepdive.whatwouldjesusdo.model.pojo.UserWithPassages;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -45,8 +46,9 @@ public interface UserDao {
  Single<Integer> delete(Collection<User> users);
 
  @Query("SELECT * FROM User WHERE user_id = :id")
- LiveData<UserWithPassages> select(long id);
+ LiveData<User> select(long id);
 
- @Query("SELECT * FROM User WHERE passage_id = :id ORDER BY submitted ASC")
- LiveData<List<User>> selectForPassage(long id);
+ @Query("SELECT * FROM User WHERE oauth = :oauth")
+ Maybe<User> select(String oauth);
+
 }

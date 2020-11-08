@@ -1,10 +1,11 @@
 package edu.cnm.deepdive.whatwouldjesusdo.model.pojo;
 
 import androidx.room.Relation;
+import edu.cnm.deepdive.whatwouldjesusdo.model.entity.Passage;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
 import java.util.List;
 
-public class PassageWithUser {
+public class PassageWithUser extends Passage {
 
   @Relation(
       entity = User.class,

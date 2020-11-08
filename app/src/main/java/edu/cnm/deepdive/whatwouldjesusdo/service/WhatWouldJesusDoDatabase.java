@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.whatwouldjesusdo.model;
+package edu.cnm.deepdive.whatwouldjesusdo.service;
 
 import android.app.Application;
 import androidx.room.Database;
@@ -33,7 +33,10 @@ public abstract class WhatWouldJesusDoDatabase extends RoomDatabase {
 
     private static final WhatWouldJesusDoDatabase INSTANCE =
         Room.databaseBuilder(context, WhatWouldJesusDoDatabase.class, DB_NAME)
+//            .addCallback()
             .build();
 
   }
+
+  // TODO explore creating a callback to preload the database
 }

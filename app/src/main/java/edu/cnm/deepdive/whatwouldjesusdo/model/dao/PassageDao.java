@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.Passage;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
@@ -43,9 +44,13 @@ public interface PassageDao {
   @Delete
   Single<Integer> delete(Collection<Passage> passages);
 
+  @Transaction
   @Query("SELECT * FROM Passage WHERE passage_id = :id")
-  LiveData<PassageWithUser> select(Long id);
+  LiveData<PassageWithUser> select(long id);
 
-  @Query("SELECT * FROM User WHERE user_id = :id ORDER BY submitted ASC")
-  LiveData<List<User>> selectForUser(long id);
+  @Query("SELECT * FROM Passage WHERE user_id = :id"
+      + " ORDER BY book ASC, chapter ASC, starting_verse ASC, ending_verse ASC")
+  LiveData<List<Passage>> selectForUser(long id);
+
+//  @Query("SELECT p.* FROM passage AS p INNER JOIN user AS u ON u.user_id = p.user_id")
 }

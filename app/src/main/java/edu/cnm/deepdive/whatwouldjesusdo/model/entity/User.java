@@ -14,22 +14,18 @@ import io.reactivex.annotations.NonNull;
 public class User {
 
   @PrimaryKey
-  @NonNull
   @ColumnInfo(name = "user_id")
-  private long Id;
+  private long id;
 
   @NonNull
   private String oauth;
 
-  @NonNull
-  private String password;
-
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   @NonNull
@@ -41,12 +37,4 @@ public class User {
     this.oauth = oauth;
   }
 
-  @NonNull
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(@NonNull String password) {
-    this.password = password;
-  }
 }

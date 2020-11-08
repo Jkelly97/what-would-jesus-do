@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 import io.reactivex.annotations.NonNull;
 @Entity(
     indices = {
-        @Index(value = {"book", "verse"})
+        @Index(value = {"book","chapter", "starting_verse", "ending_verse"})
     },
     foreignKeys = {
       @ForeignKey(entity = User.class,
@@ -22,17 +22,17 @@ public class Passage {
   @ColumnInfo(name = "passage_id", index = true)
   private long id;
 
-  @ColumnInfo(index = true)
   private String book;
-
 
   private int chapter;
 
-  @ColumnInfo(index = true)
-  private int verse;
+  @ColumnInfo(name = "starting_verse")
+  private int startingVerse;
 
-  @NonNull
-  @ColumnInfo(name = "user_id")
+  @ColumnInfo(name = "ending_verse")
+  private int endingVerse;
+
+  @ColumnInfo(name = "user_id", index = true)
   private long userId;
 
   public long getId() {
@@ -59,12 +59,20 @@ public class Passage {
     this.chapter = chapter;
   }
 
-  public int getVerse() {
-    return verse;
+  public int getStartingVerse() {
+    return startingVerse;
   }
 
-  public void setVerse(int verse) {
-    this.verse = verse;
+  public void setStartingVerse(int startingVerse) {
+    this.startingVerse = startingVerse;
+  }
+
+  public int getEndingVerse() {
+    return endingVerse;
+  }
+
+  public void setEndingVerse(int endingVerse) {
+    this.endingVerse = endingVerse;
   }
 
   public long getUserId() {
