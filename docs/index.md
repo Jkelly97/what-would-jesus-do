@@ -6,7 +6,7 @@ Users will be able to fit reading the bible into their normal lives while workin
 
 * The ability to pull the KJV Bible to the application to read.
 * The ability to navigate through the Bible at will.
-* The to search to passages based on key words.
+* The to search to passages based on keywords.
 * The ability to save specific passages as "favorites."
 
 ## Intended users
