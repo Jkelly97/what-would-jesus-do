@@ -14,7 +14,7 @@ Users will be able to fit reading the bible into their normal lives while workin
 * Christians who may be struggling with their faith.
 
 > As a Christian myself I know sometimes life sucks. With this application, for any problem, there is an easy to attempt finding a solution. The 
-key word search bar will find an answer for a majority of you problems. This way you don't have to spend hours scowering page after page to find 
+key word search bar will find an answer for a majority of you problems. This way you don't have to spend hours scouring page after page to find 
 what you are looking for.
 
 * People of other or no faith. 
