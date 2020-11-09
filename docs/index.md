@@ -13,13 +13,15 @@ Users will be able to fit reading the bible into their normal lives while workin
 
 * Christians who may be struggling with their faith.
 
-> As a Christian myself I know sometimes life sucks. With this application for any problem, there is an easy to attempt finding a solution.
+> As a Christian myself I know sometimes life sucks. With this application, for any problem, there is an easy to attempt finding a solution. The 
+key word search bar will find an answer for a majority of you problems. This way you don't have to spend hours scowering page after page to find 
+what you are looking for.
 
 * People of other or no faith. 
 
 > As someone who may be interested in Christianity you might just not know where to start.  With this application it will be made 
-  easier on you, in giving you an outlet into the Bible. This will be done by taking away excuses such as I don't have time to read the Bible and 
-  I don't know how to find a church.
+  easier on you, in giving you an outlet into the Bible. This will be done by taking away excuses such as "I don't have time to read the Bible" and 
+  "I don't know how to find a church". With this you aree able to remove excuses not to try you hand in the faith.
 
 
 ## Functionality

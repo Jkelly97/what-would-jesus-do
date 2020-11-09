@@ -13,7 +13,7 @@ import io.reactivex.annotations.NonNull;
     })
 public class User {
 
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "user_id")
   private long id;
 

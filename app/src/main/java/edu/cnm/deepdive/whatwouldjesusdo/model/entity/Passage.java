@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 import io.reactivex.annotations.NonNull;
 @Entity(
     indices = {
-        @Index(value = {"book","chapter", "starting_verse", "ending_verse"})
+        @Index(value = {"book", "chapter", "starting_verse", "ending_verse"})
     },
     foreignKeys = {
       @ForeignKey(entity = User.class,
@@ -18,7 +18,7 @@ import io.reactivex.annotations.NonNull;
 )
 public class Passage {
 
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "passage_id", index = true)
   private long id;
 

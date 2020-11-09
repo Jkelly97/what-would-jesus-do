@@ -73,6 +73,7 @@ public class MainRepository {
     )
         .subscribeOn(Schedulers.io());
   }
+
   public Completable remove(Passage passage) {
     return (
         (passage.getId() == 0)

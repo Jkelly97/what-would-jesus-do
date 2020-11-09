@@ -1,0 +1,144 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "3e6b4326f76e4b8adeea0da8e8c9c019",
+    "entities": [
+      {
+        "tableName": "User",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `oauth` TEXT, PRIMARY KEY(`user_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "user_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "oauth",
+            "columnName": "oauth",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_User_oauth",
+            "unique": true,
+            "columnNames": [
+              "oauth"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_User_oauth` ON `${TABLE_NAME}` (`oauth`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Passage",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`passage_id` INTEGER NOT NULL, `book` TEXT, `chapter` INTEGER NOT NULL, `starting_verse` INTEGER NOT NULL, `ending_verse` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, PRIMARY KEY(`passage_id`), FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "passage_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "book",
+            "columnName": "book",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "chapter",
+            "columnName": "chapter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startingVerse",
+            "columnName": "starting_verse",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endingVerse",
+            "columnName": "ending_verse",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "passage_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_Passage_book_chapter_starting_verse_ending_verse",
+            "unique": false,
+            "columnNames": [
+              "book",
+              "chapter",
+              "starting_verse",
+              "ending_verse"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Passage_book_chapter_starting_verse_ending_verse` ON `${TABLE_NAME}` (`book`, `chapter`, `starting_verse`, `ending_verse`)"
+          },
+          {
+            "name": "index_Passage_passage_id",
+            "unique": false,
+            "columnNames": [
+              "passage_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Passage_passage_id` ON `${TABLE_NAME}` (`passage_id`)"
+          },
+          {
+            "name": "index_Passage_user_id",
+            "unique": false,
+            "columnNames": [
+              "user_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Passage_user_id` ON `${TABLE_NAME}` (`user_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "User",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "user_id"
+            ],
+            "referencedColumns": [
+              "user_id"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [
+      {
+        "viewName": "",
+        "createSql": ""
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3e6b4326f76e4b8adeea0da8e8c9c019')"
+    ]
+  }
+}
