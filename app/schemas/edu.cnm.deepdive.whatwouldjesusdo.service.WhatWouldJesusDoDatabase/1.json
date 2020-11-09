@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "3e6b4326f76e4b8adeea0da8e8c9c019",
+    "identityHash": "5976bfba1975c8ee434b5c8cd1e76ec6",
     "entities": [
       {
         "tableName": "User",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `oauth` TEXT, PRIMARY KEY(`user_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `oauth` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -25,7 +25,7 @@
           "columnNames": [
             "user_id"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [
           {
@@ -41,7 +41,7 @@
       },
       {
         "tableName": "Passage",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`passage_id` INTEGER NOT NULL, `book` TEXT, `chapter` INTEGER NOT NULL, `starting_verse` INTEGER NOT NULL, `ending_verse` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, PRIMARY KEY(`passage_id`), FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`passage_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `book` TEXT, `chapter` INTEGER NOT NULL, `starting_verse` INTEGER NOT NULL, `ending_verse` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -84,7 +84,7 @@
           "columnNames": [
             "passage_id"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [
           {
@@ -130,15 +130,10 @@
         ]
       }
     ],
-    "views": [
-      {
-        "viewName": "",
-        "createSql": ""
-      }
-    ],
+    "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3e6b4326f76e4b8adeea0da8e8c9c019')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5976bfba1975c8ee434b5c8cd1e76ec6')"
     ]
   }
 }
