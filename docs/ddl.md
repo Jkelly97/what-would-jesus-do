@@ -26,4 +26,5 @@ CREATE INDEX IF NOT EXISTS `index_Passage_passage_id` ON `Passage` (`passage_id`
 
 CREATE INDEX IF NOT EXISTS `index_Passage_user_id` ON `Passage` (`user_id`);
 ```
+
 [`ddl.sql`](sql/ddl.sql)
