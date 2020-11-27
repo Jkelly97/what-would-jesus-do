@@ -1,7 +1,9 @@
 package edu.cnm.deepdive.whatwouldjesusdo.service;
 
 import android.content.Context;
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.PassageDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.UserDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.Passage;
@@ -25,7 +27,7 @@ public class MainRepository {
     passageDao = WhatWouldJesusDoDatabase.getInstance().getPassageDao();
   }
 
-  public Single<User> getOrCreate(String oauth) {
+  public Single<User> getOrCreate(String oauth, @NonNull GoogleSignInAccount account) {
     return userDao.select(oauth)
         .switchIfEmpty(
             Single.fromCallable(() -> {
