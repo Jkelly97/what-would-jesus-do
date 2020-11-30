@@ -13,7 +13,6 @@ import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 import java.util.List;
-import javax.xml.validation.SchemaFactoryLoader;
 
 public class MainRepository {
 
@@ -27,12 +26,13 @@ public class MainRepository {
     passageDao = WhatWouldJesusDoDatabase.getInstance().getPassageDao();
   }
 
-  public Single<User> getOrCreate(String oauth, @NonNull GoogleSignInAccount account) {
-    return userDao.select(oauth)
+  public Single<User> getOrCreate(@NonNull GoogleSignInAccount account) {
+    return userDao.select(account)
         .switchIfEmpty(
             Single.fromCallable(() -> {
               User user = new User();
-              user.setOauth(oauth);
+              user.setDisplayName(account.getDisplayName());
+              user.setOauth(account.getId());
               return user;
             })
                 .flatMap((user) ->

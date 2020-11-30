@@ -18,6 +18,10 @@ public class User {
   private long id;
 
   @NonNull
+  @ColumnInfo(name = "display_name")
+  private String displayName;
+
+  @NonNull
   private String oauth;
 
   public long getId() {
@@ -37,4 +41,11 @@ public class User {
     this.oauth = oauth;
   }
 
+  @NonNull
+  public String getDisplayName() {
+    return displayName;
+  }
+
+  public void setDisplayName(String displayName) {
+  }
 }

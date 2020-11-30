@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.whatwouldjesusdo.controller.ui.gallery;
+package edu.cnm.deepdive.whatwouldjesusdo.controller.ui.saved;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class SavedViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public GalleryViewModel() {
+  public SavedViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is gallery fragment");
+    mText.setValue("This is saved fragment");
   }
 
   public LiveData<String> getText() {

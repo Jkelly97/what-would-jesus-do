@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.whatwouldjesusdo.controller;
+package edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import edu.cnm.deepdive.whatwouldjesusdo.R;
+import edu.cnm.deepdive.whatwouldjesusdo.controller.RecyclerViewAdapter;
 import edu.cnm.deepdive.whatwouldjesusdo.controller.dummy.DummyContent;
 
 /**

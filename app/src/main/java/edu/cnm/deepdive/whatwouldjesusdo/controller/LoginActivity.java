@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
   private GoogleSignInService service;
   private ActivityLoginBinding binding;
   private MainRepository mainRepository;
+  private long oauth;
 
   @SuppressLint("CheckResult")
   @Override
@@ -27,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     service = GoogleSignInService.getInstance();
     mainRepository = new MainRepository(this);
-    //noinspection ResultOfMethodCallIgnored
     service.refresh()
         .subscribe(
             this::updateAndSwitch,

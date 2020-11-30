@@ -8,6 +8,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
 import edu.cnm.deepdive.whatwouldjesusdo.model.pojo.UserWithPassages;
 import io.reactivex.Maybe;
@@ -49,6 +50,8 @@ public interface UserDao {
  LiveData<User> select(long id);
 
  @Query("SELECT * FROM User WHERE oauth = :oauth")
- Maybe<User> select(String oauth);
+ default Maybe<User> select(GoogleSignInAccount oauth) {
+  return null;
+ }
 
 }

@@ -10,5 +10,5 @@
   android:layout_marginRight="16dp"
   android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.BibleFragment1"
   app:layoutManager="LinearLayoutManager"
-  tools:context=".controller.BibleFragment"
+  tools:context=".controller.ui.bible.BibleFragment"
   tools:listitem="@layout/bible_fragment_item"/>

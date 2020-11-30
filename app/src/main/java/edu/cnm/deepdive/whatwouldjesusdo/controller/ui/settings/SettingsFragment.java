@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.whatwouldjesusdo.controller;
+package edu.cnm.deepdive.whatwouldjesusdo.controller.ui.settings;
 
 import android.os.Bundle;
 import android.view.View;

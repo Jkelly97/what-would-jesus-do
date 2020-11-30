@@ -3,25 +3,37 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@+id/nav_home">
+  app:startDestination="@+id/navigation_bible">
 
   <fragment
-    android:id="@+id/nav_home"
-    android:label="@string/menu_home"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.home.HomeFragment"
-    tools:layout="@layout/fragment_home"/>
-
-  <fragment
-    android:id="@+id/nav_gallery"
-    android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.gallery.GalleryFragment"
+    android:id="@+id/navigation_bible"
+    android:label="@string/menu_bible"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible.BibleFragment"
     tools:layout="@layout/fragment_gallery"/>
 
   <fragment
-    android:id="@+id/nav_slideshow"
-    android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.slideshow.SlideshowFragment"
+    android:id="@+id/navigation_saved"
+    android:label="@string/menu_saved"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.saved.SavedFragment"
+    tools:layout="@layout/fragment_saved"/>
+
+
+  <fragment
+    android:id="@+id/navigation_settings"
+    android:label="@string/menu_settings"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.settings.SettingsFragment"
     tools:layout="@layout/fragment_slideshow"/>
 
+  <fragment
+    android:id="@+id/navigation_profile"
+    android:label="@string/menu_profile"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.ProfileFragment"
+    tools:layout="@layout/fragment_profile"/>
+
+  <fragment
+    android:id="@+id/navigation_replay"
+    android:label="@string/menu_replay"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.ReplayFragment"
+    tools:layout="@layout/fragment_replay"/>
 
 </navigation>

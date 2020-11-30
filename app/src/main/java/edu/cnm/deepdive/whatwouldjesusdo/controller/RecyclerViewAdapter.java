@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import edu.cnm.deepdive.whatwouldjesusdo.R;
 import edu.cnm.deepdive.whatwouldjesusdo.controller.dummy.DummyContent.DummyItem;
 
 import java.util.List;

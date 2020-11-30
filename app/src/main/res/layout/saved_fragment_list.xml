@@ -10,5 +10,5 @@
   android:layout_marginRight="16dp"
   android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.SavedFragment2"
   app:layoutManager="LinearLayoutManager"
-  tools:context=".controller.SavedFragment"
+  tools:context=".controller.ui.saved.SavedFragment"
   tools:listitem="@layout/saved_fragment_item"/>
