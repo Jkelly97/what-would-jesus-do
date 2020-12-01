@@ -30,4 +30,9 @@
   <string name="attachment_summary_off">Only download attachments when manually requested</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="saved_2">Saved 2</string>
+  <string name="saved_1">saved_1</string>
+  <string name="saved_3">Saved 3</string>
+  <string name="saved_4">Saved 4</string>
+  <string name="saved_5">Saved 5</string>
 </resources>

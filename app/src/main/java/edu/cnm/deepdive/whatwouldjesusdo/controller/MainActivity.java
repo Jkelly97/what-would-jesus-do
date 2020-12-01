@@ -20,6 +20,7 @@ import edu.cnm.deepdive.whatwouldjesusdo.R;
 public class MainActivity extends AppCompatActivity {
 
   private AppBarConfiguration mAppBarConfiguration;
+  private Bundle savedInstanceState;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
