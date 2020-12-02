@@ -4,8 +4,10 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import edu.cnm.deepdive.whatwouldjesusdo.BuildConfig;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.PassageDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.UserDao;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.Verse;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.Passage;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
 import edu.cnm.deepdive.whatwouldjesusdo.model.pojo.PassageWithUser;
@@ -19,11 +21,13 @@ public class MainRepository {
   public final Context context;
   private final UserDao userDao;
   private final PassageDao passageDao;
+  private final WWJDService serviceProxy;
 
   public MainRepository(Context context) {
     this.context = context;
     userDao = WhatWouldJesusDoDatabase.getInstance().getUserDao();
     passageDao = WhatWouldJesusDoDatabase.getInstance().getPassageDao();
+    serviceProxy = WWJDService.getInstance();
   }
 
   public Single<User> getOrCreate(@NonNull GoogleSignInAccount account) {
@@ -83,6 +87,12 @@ public class MainRepository {
             : passageDao.delete(passage)
                 .ignoreElement()
     )
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Single<List<Verse>> search(String query) {
+    return serviceProxy.search(BuildConfig.AUTHORIZATION_HEADER, BuildConfig.API_KEY, query)
+        .map((response) -> response.getData().getVerses())
         .subscribeOn(Schedulers.io());
   }
 }

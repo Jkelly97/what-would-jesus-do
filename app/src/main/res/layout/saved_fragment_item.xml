@@ -4,17 +4,35 @@
   android:layout_height="wrap_content"
   android:orientation="horizontal">
 
-  <TextView
-    android:id="@+id/item_number"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/text_margin"
-    android:textAppearance="?attr/textAppearanceListItem"/>
 
-  <TextView
-    android:id="@+id/content"
+  <Button
+    android:id="@+id/Saved1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/text_margin"
-    android:textAppearance="?attr/textAppearanceListItem"/>
+    android:text="@string/saved_1"/>
+  <Button
+    android:id="@+id/Saved2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin"
+    android:text="@string/saved_2"/>
+  <Button
+    android:id="@+id/Saved3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin"
+    android:text="@string/saved_3"/>
+  <Button
+    android:id="@+id/Saved4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin"
+    android:text="@string/saved_4"/>
+  <Button
+    android:id="@+id/Saved5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/text_margin"
+    android:text="@string/saved_5"/>
 </LinearLayout>

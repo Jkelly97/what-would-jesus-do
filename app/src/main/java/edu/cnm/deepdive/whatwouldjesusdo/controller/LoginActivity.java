@@ -13,6 +13,10 @@ import edu.cnm.deepdive.whatwouldjesusdo.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.whatwouldjesusdo.service.GoogleSignInService;
 import edu.cnm.deepdive.whatwouldjesusdo.service.MainRepository;
 
+/**
+ * This class works with the google sign in class to tell the application what to do upon login
+ * activies.
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private static final int LOGIN_REQUEST_CODE = 1000;
@@ -22,6 +26,10 @@ public class LoginActivity extends AppCompatActivity {
   private MainRepository mainRepository;
   private long oauth;
 
+  /**
+   * This method allows for the loggining in to connect to the application.
+   * @param savedInstanceState
+   */
   @SuppressLint("CheckResult")
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,12 @@ public class LoginActivity extends AppCompatActivity {
         );
   }
 
+  /**
+   * This method gives a result upon failint to or succesfully logging in.
+   * @param requestCode
+   * @param resultCode
+   * @param data
+   */
   @Override
   protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     if (requestCode == LOGIN_REQUEST_CODE) {
@@ -51,6 +65,10 @@ public class LoginActivity extends AppCompatActivity {
     }
   }
 
+  /**
+   * This method updates information depending on who logs in on the device.
+   * @param account
+   */
   private void updateAndSwitch(GoogleSignInAccount account) {
     mainRepository.getOrCreate(account)
         .subscribe(
@@ -60,7 +78,6 @@ public class LoginActivity extends AppCompatActivity {
               startActivity(intent);
             },
             (throwable) -> {
-              // TODO Remove this after development complete.
               Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable);
               throw new RuntimeException(throwable);
             }

@@ -1,8 +1,12 @@
 ## Summary
 
-This application will feature the KJV Bible, along with many others, and the ability to find passages by the key word(s) provided.  
-This may include words that may not be in the text itself but merely associated with specified verses.
-Users will be able to fit reading the bible into their normal lives while working around time restraints.
+This application will feature the KJV Bible, along with many others, and the ability to find passages 
+by the key word(s) provided. This may include words that may not be in the text itself but merely
+associated with specified verses. Users will be able to fit reading the bible into their normal 
+lives while working around time restraints. 
+ This application is aimed at making Christian worship easier on a daily basis. In today's times it 
+ can be very difficult to make time for just about anything extra like reading the bible. This 
+ application will help to remove some of this difficulty. 
 
 * The ability to pull the KJV Bible to the application to read.
 * The ability to navigate through the Bible at will.

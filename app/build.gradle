@@ -1,4 +1,18 @@
 apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
+static def getProperty(String filename, String property) {
+    Properties properties  = new Properties()
+    properties.load(new FileInputStream(filename))
+    return properties.getProperty(property)
+}
+
+static def quoted(String value) {
+    return "\"${value}\""
+}
+
+
+
 
 android {
     compileSdkVersion 29
@@ -12,6 +26,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def connection_properties = "$projectDir/../../../services/wwjd.properties"
+
+        buildConfigField "String", "API_KEY",
+                quoted(getProperty(connection_properties, "api_key"))
+        buildConfigField "String", "BASE_URL",
+                quoted(getProperty(connection_properties, "base_url"))
+
+        def username = getProperty(connection_properties, "username")
+        def password = getProperty(connection_properties, "password")
+        def basic_encoded = "${username}:${password}".bytes.encodeBase64(false).toString()
+
+        buildConfigField "String", "AUTHORIZATION_HEADER",
+                quoted("Basic ${basic_encoded}")
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -47,17 +75,16 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.navigation:navigation-fragment:2.3.1'
-    implementation 'androidx.navigation:navigation-ui:2.3.1'
+
+    implementation "androidx.navigation:navigation-fragment:$navigation_version"
+    implementation "androidx.navigation:navigation-ui:$navigation_version"
 
     implementation 'com.google.android.material:material:1.2.1'
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
     implementation 'androidx.preference:preference:1.1.1'
 
     def room_version = '2.2.5'
@@ -70,6 +97,18 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // Gson (Google JSON parser) dependency
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // Retrofit (REST client) with ReactiveX & Gson integration
+    def retrofit_version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    // OkHttp logging dependency
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     //Stetho
     implementation 'com.facebook.stetho:stetho:1.5.1'

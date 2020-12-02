@@ -31,8 +31,9 @@
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="saved_2">Saved 2</string>
-  <string name="saved_1">saved_1</string>
+  <string name="saved_1">Saved 1</string>
   <string name="saved_3">Saved 3</string>
   <string name="saved_4">Saved 4</string>
   <string name="saved_5">Saved 5</string>
+  <string name="replay_fragment">This fragment will take you back to where you were last reading.</string>
 </resources>

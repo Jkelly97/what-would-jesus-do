@@ -9,7 +9,7 @@
     android:id="@+id/navigation_bible"
     android:label="@string/menu_bible"
     android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible.BibleFragment"
-    tools:layout="@layout/fragment_gallery"/>
+    tools:layout="@layout/fragment_bible"/>
 
   <fragment
     android:id="@+id/navigation_saved"
@@ -22,7 +22,7 @@
     android:id="@+id/navigation_settings"
     android:label="@string/menu_settings"
     android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.settings.SettingsFragment"
-    tools:layout="@layout/fragment_slideshow"/>
+    tools:layout="@layout/fragment_settings"/>
 
   <fragment
     android:id="@+id/navigation_profile"
