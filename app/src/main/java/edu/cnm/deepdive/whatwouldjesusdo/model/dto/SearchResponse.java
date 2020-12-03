@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.whatwouldjesusdo.model.dto;
 
+import androidx.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import java.util.List;
 
@@ -107,6 +108,12 @@ public class SearchResponse {
 
       public void setText(String text) {
         this.text = text;
+      }
+
+      @NonNull
+      @Override
+      public String toString() {
+        return reference + "\n" + text;
       }
     }
   }

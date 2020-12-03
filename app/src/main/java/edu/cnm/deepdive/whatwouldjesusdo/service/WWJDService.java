@@ -21,8 +21,9 @@ public interface WWJDService {
   Single<SearchResponse> search(@Header("Authorization") String authHeader, @Header("api-key")
       String apiKey, @Query("query") String query);
 
-//  @GET("bible")
-//  Single<SearchResponse> bible()
+  @GET("bible")
+  Single<SearchResponse> bible(@Header("Authorization") String authHeader, @Header("api-key")
+      String apiKey);
 
   static WWJDService getInstance() {
     return InstanceHolder.INSTANCE;

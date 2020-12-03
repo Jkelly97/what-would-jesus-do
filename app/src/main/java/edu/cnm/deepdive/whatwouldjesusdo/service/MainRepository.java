@@ -90,6 +90,10 @@ public class MainRepository {
         .subscribeOn(Schedulers.io());
   }
 
+//  public Single<bible> kingJamesVersion(String ) {
+//    return serviceProxy.bible(BuildConfig.)
+//  }
+
   public Single<List<Verse>> search(String query) {
     return serviceProxy.search(BuildConfig.AUTHORIZATION_HEADER, BuildConfig.API_KEY, query)
         .map((response) -> response.getData().getVerses())

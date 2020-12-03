@@ -36,4 +36,5 @@
   <string name="saved_4">Saved 4</string>
   <string name="saved_5">Saved 5</string>
   <string name="replay_fragment">This fragment will take you back to where you were last reading.</string>
+  <string name="search_term_hint">Search Term</string>
 </resources>
