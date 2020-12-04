@@ -5,6 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.whatwouldjesusdo.BuildConfig;
+import edu.cnm.deepdive.whatwouldjesusdo.R;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.PassageDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.UserDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.Verse;
@@ -95,7 +96,7 @@ public class MainRepository {
 //  }
 
   public Single<List<Verse>> search(String query) {
-    return serviceProxy.search(BuildConfig.AUTHORIZATION_HEADER, BuildConfig.API_KEY, query)
+    return serviceProxy.search(BuildConfig.AUTHORIZATION_HEADER, context.getString(R.string.api_key), query)
         .map((response) -> response.getData().getVerses())
         .subscribeOn(Schedulers.io());
   }

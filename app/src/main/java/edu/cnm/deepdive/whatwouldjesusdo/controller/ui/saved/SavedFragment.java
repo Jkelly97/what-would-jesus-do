@@ -14,7 +14,7 @@ import edu.cnm.deepdive.whatwouldjesusdo.controller.MySavedRecyclerViewAdapter;
 import edu.cnm.deepdive.whatwouldjesusdo.controller.dummy.DummyContent;
 
 /**
- * A fragment representing a list of Items.
+ * A fragment representing a list of saved passages.
  */
 public class SavedFragment extends Fragment {
 
@@ -30,8 +30,7 @@ public class SavedFragment extends Fragment {
   public SavedFragment() {
   }
 
-  // TODO: Customize parameter initialization
-  @SuppressWarnings("unused")
+
   public static SavedFragment newInstance(int columnCount) {
     SavedFragment fragment = new SavedFragment();
     Bundle args = new Bundle();

@@ -12,7 +12,9 @@ static def quoted(String value) {
 }
 
 
-
+ext {
+    appName = 'WWJD'
+}
 
 android {
     compileSdkVersion 29
@@ -29,8 +31,8 @@ android {
 
         def connection_properties = "$projectDir/../../../services/wwjd.properties"
 
-        buildConfigField "String", "API_KEY",
-                quoted(getProperty(connection_properties, "api_key"))
+        resValue "string", "api_key",
+                getProperty(connection_properties, "api_key")
         buildConfigField "String", "BASE_URL",
                 quoted(getProperty(connection_properties, "base_url"))
 
@@ -118,4 +120,39 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
+}
+
+android.applicationVariants.all { variant ->
+    task("generate${variant.name.capitalize()}Javadoc", type: Javadoc) {
+        def docTitle = "${appName} ${project.android.defaultConfig.versionName}"
+        def compileTask = variant.javaCompileProvider.get()
+        def androidLibJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
+        title docTitle
+        description "Generates Javadoc for $variant.name."
+        source = compileTask.source
+        destinationDir = file("${projectDir}/../docs/api")
+        doFirst {
+            classpath = files(compileTask.classpath.files) + files(androidLibJar)
+        }
+        options {
+            links 'https://docs.oracle.com/javase/8/docs/api/'
+            links 'http://reactivex.io/RxJava/javadoc/'
+            links 'https://javadoc.io/doc/io.reactivex.rxjava2/rxandroid/latest/'
+            links 'https://javadoc.io/doc/com.google.code.gson/gson/latest/'
+            links 'https://square.github.io/retrofit/2.x/retrofit/'
+            links 'https://square.github.io/okhttp/3.x/okhttp/'
+            links 'https://square.github.io/okhttp/3.x/logging-interceptor/'
+            links 'https://javadoc.io/doc/com.facebook.stetho/stetho/latest/'
+            links 'https://commons.apache.org/proper/commons-csv/apidocs/'
+            links 'https://javadoc.io/doc/net.openid/appauth/'
+            links 'https://spotify.github.io/android-sdk/auth-lib/docs/'
+            links 'https://spotify.github.io/android-sdk/app-remote-lib/docs/'
+            linksOffline 'https://developer.android.com/reference', "${projectDir}/../link-offline/android"
+            linksOffline 'https://developers.google.com/android/reference', "${projectDir}/../link-offline/google"
+            windowTitle docTitle
+        }
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.source = '8'
+    }
 }

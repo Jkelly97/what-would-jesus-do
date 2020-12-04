@@ -1,0 +1,14 @@
+edu.cnm.deepdive.whatwouldjesusdo
+edu.cnm.deepdive.whatwouldjesusdo.controller
+edu.cnm.deepdive.whatwouldjesusdo.controller.dummy
+edu.cnm.deepdive.whatwouldjesusdo.controller.ui
+edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible
+edu.cnm.deepdive.whatwouldjesusdo.controller.ui.saved
+edu.cnm.deepdive.whatwouldjesusdo.controller.ui.settings
+edu.cnm.deepdive.whatwouldjesusdo.databinding
+edu.cnm.deepdive.whatwouldjesusdo.model.dao
+edu.cnm.deepdive.whatwouldjesusdo.model.dto
+edu.cnm.deepdive.whatwouldjesusdo.model.entity
+edu.cnm.deepdive.whatwouldjesusdo.model.pojo
+edu.cnm.deepdive.whatwouldjesusdo.service
+edu.cnm.deepdive.whatwouldjesusdo.viewmodel

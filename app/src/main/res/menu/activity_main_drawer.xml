@@ -7,16 +7,20 @@
     android:checkableBehavior="single">
     <item
       android:id="@+id/navigation_bible"
+      android:icon="@drawable/ic_baseline_menu_bible"
       android:title="@string/menu_bible"/>
     <item
       android:id="@+id/navigation_replay"
+      android:icon="@drawable/ic_baseline_replay_24"
       android:title="@string/menu_replay"/>
     <item
       android:id="@+id/navigation_saved"
+      android:icon="@drawable/ic_baseline_save_24"
       android:title="@string/menu_saved"/>
 
     <item
       android:id="@+id/navigation_profile"
+      android:icon="@drawable/ic_baseline_person_24"
       android:title="@string/menu_profile"/>
 
     <item

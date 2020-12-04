@@ -10,20 +10,28 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.whatwouldjesusdo.R;
 import edu.cnm.deepdive.whatwouldjesusdo.databinding.FragmentBibleBinding;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.Verse;
 import edu.cnm.deepdive.whatwouldjesusdo.viewmodel.MainViewModel;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * A fragment representing the Bible itself.
+ * A fragment representing the Bible itself. It applies the layout to the main activity resulting
+ * in the bible screen in the application {@link edu.cnm.deepdive.whatwouldjesusdo.controller.MainActivity}.
  */
 public class BibleFragment extends Fragment {
 
   private MainViewModel viewModel;
   private FragmentBibleBinding binding;
 
+
+  /**
+   * This method enables the search function.
+   * @param inflater
+   * @param container
+   * @param savedInstanceState
+   * @return
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull @NotNull LayoutInflater inflater,
@@ -35,6 +43,11 @@ public class BibleFragment extends Fragment {
     return binding.getRoot();
   }
 
+  /**
+   * This method develops the search bar function.
+   * @param view
+   * @param savedInstanceState
+   */
   @Override
   public void onViewCreated(@NonNull @NotNull View view,
       @Nullable Bundle savedInstanceState) {

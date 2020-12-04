@@ -13,6 +13,12 @@ lives while working around time restraints.
 * The to search to passages based on keywords.
 * The ability to save specific passages as "favorites."
 
+## Summary
+
+It is current state it is still missing some key functionality. As it stands there is a keyword 
+search, but the bible fragment does not include the entire bible as planned. The replay function and 
+saving methods are also incomplete.
+
 ## Intended users
 
 * Christians who may be struggling with their faith.
@@ -72,5 +78,10 @@ what you are looking for.
 
 ## [Wireframe](wireframe.md)
 
-
 ## [Entity Relationship Diagram](erd.md)
+
+## [Build Instructions](build_instructions.md)
+
+## [User Instructions](user_instructions.md)
+
+## [Copyrights & licenses](copyrights_licenses.md)
