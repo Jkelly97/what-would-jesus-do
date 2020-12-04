@@ -8,16 +8,31 @@
   <fragment
     android:id="@+id/navigation_bible"
     android:label="@string/menu_bible"
-
     android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible.BibleFragment"
-    tools:layout="@layout/fragment_bible"/>
+    tools:layout="@layout/fragment_bible">
+
+    <action
+      android:id="@+id/open_book"
+      app:popUpTo="@id/navigation_bible"
+      app:destination="@id/navigation_book">
+
+      <argument
+        android:name="book_id"
+        app:argType="string"/>
+    </action>
+  </fragment>
+
+  <fragment
+    android:id="@+id/navigation_search"
+    android:label="@string/menu_search"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible.BibleFragment"
+    tools:layout="@layout/fragment_search"/>
 
   <fragment
     android:id="@+id/navigation_saved"
     android:label="@string/menu_saved"
     android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.saved.SavedFragment"
     tools:layout="@layout/fragment_saved"/>
-
 
   <fragment
     android:id="@+id/navigation_settings"
@@ -26,15 +41,20 @@
     tools:layout="@layout/fragment_settings"/>
 
   <fragment
-    android:id="@+id/navigation_profile"
-    android:label="@string/menu_profile"
-    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.ProfileFragment"
-    tools:layout="@layout/fragment_profile"/>
-
-  <fragment
     android:id="@+id/navigation_replay"
     android:label="@string/menu_replay"
     android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.ReplayFragment"
     tools:layout="@layout/fragment_replay"/>
 
+  <fragment
+    android:id="@+id/navigation_book"
+    android:label="@string/menu_book"
+    android:name="edu.cnm.deepdive.whatwouldjesusdo.controller.ui.bible.BookFragment"
+    tools:layout="@layout/fragment_book">
+
+    <argument
+      android:name="book_id"
+      app:argType="string"/>
+
+  </fragment>
 </navigation>

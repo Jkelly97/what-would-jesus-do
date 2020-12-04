@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -190,16 +190,31 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/BookDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">BookDto</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBooks()">getBooks</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/ChapterDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">ChapterDto</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChapters()">getChapters</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/SearchResponse.SearchData.Verse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">SearchResponse.SearchData.Verse</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getResults()">getResults</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/dto/PassageDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">PassageDto</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getText()">getText</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThrowable()">getThrowable</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#search(java.lang.String)">search</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;keyword)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -278,6 +293,33 @@ implements <a href="https://developer.android.com/reference/androidx/lifecycle/L
 <li class="blockList">
 <h4>getResults</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/SearchResponse.SearchData.Verse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">SearchResponse.SearchData.Verse</a>&gt;&gt;&nbsp;getResults()</pre>
+</li>
+</ul>
+<a id="getBooks()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBooks</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/BookDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">BookDto</a>&gt;&gt;&nbsp;getBooks()</pre>
+</li>
+</ul>
+<a id="getChapters()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChapters</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/ChapterDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">ChapterDto</a>&gt;&gt;&nbsp;getChapters()</pre>
+</li>
+</ul>
+<a id="getText()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getText</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/dto/PassageDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">PassageDto</a>&gt;&nbsp;getText()</pre>
 </li>
 </ul>
 <a id="getThrowable()">

@@ -8,7 +8,11 @@ import edu.cnm.deepdive.whatwouldjesusdo.BuildConfig;
 import edu.cnm.deepdive.whatwouldjesusdo.R;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.PassageDao;
 import edu.cnm.deepdive.whatwouldjesusdo.model.dao.UserDao;
-import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.Verse;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.BookDto;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.BookDto.BooksResponse;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.ChapterDto;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.PassageDto;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.VerseDto;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.Passage;
 import edu.cnm.deepdive.whatwouldjesusdo.model.entity.User;
 import edu.cnm.deepdive.whatwouldjesusdo.model.pojo.PassageWithUser;
@@ -16,6 +20,8 @@ import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class MainRepository {
 
@@ -91,13 +97,40 @@ public class MainRepository {
         .subscribeOn(Schedulers.io());
   }
 
-//  public Single<bible> kingJamesVersion(String ) {
-//    return serviceProxy.bible(BuildConfig.)
-//  }
-
-  public Single<List<Verse>> search(String query) {
+  public Single<List<VerseDto>> search(String query) {
     return serviceProxy.search(BuildConfig.AUTHORIZATION_HEADER, context.getString(R.string.api_key), query)
         .map((response) -> response.getData().getVerses())
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Single<List<BookDto>> getBooks() {
+    AtomicInteger counter = new AtomicInteger();
+    return serviceProxy.getBooks(BuildConfig.AUTHORIZATION_HEADER, context.getString(R.string.api_key))
+        .map(BooksResponse::getData)
+        .map((books) -> books.stream()
+            .peek((bookDto) -> bookDto.setOrder(counter.incrementAndGet()))
+            .collect(Collectors.toList())
+        )
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Single<List<ChapterDto>> getChapters(BookDto book) {
+    AtomicInteger counter = new AtomicInteger();
+    return serviceProxy.getChapters(BuildConfig.AUTHORIZATION_HEADER, context.getString(R.string.api_key), book.getId())
+        .map((chapters) -> chapters.stream()
+            .peek((chapterDto) -> chapterDto.setOrder(counter.incrementAndGet()))
+            .peek((chapter) -> book.getChapters().add(chapter))
+            .collect(Collectors.toList())
+        )
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Single<PassageDto> getPassage(ChapterDto chapter) {
+    return serviceProxy.getPassage(BuildConfig.AUTHORIZATION_HEADER, context.getString(R.string.api_key), chapter.getId())
+        .map(passageResponse -> {
+          chapter.setPassage(passageResponse.getData().getContent());
+          return passageResponse.getData();
+        })
         .subscribeOn(Schedulers.io());
   }
 }

@@ -5,13 +5,13 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".controller.ui.bible.BibleFragment">
+  tools:context=".controller.ui.bible.BookFragment">
 
 
 
 
   <ListView
-    android:id="@+id/books"
+    android:id="@+id/chapters"
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:layout_margin="@dimen/half_margin"

@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":1,"i2":6};
+var data = {"i0":6,"i1":6,"i2":1,"i3":6,"i4":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -168,17 +168,31 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="../model/dto/SearchResponse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">SearchResponse</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#bible(java.lang.String,java.lang.String)">bible</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
-     <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey)</code></th>
+<td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/BookDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">BookDto</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBooks(java.lang.String,java.lang.String)">getBooks</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+        <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/ChapterDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">ChapterDto</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getChapters(java.lang.String,java.lang.String,java.lang.String)">getChapters</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+           <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+           <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;bookId)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="WWJDService.html" title="interface in edu.cnm.deepdive.whatwouldjesusdo.service">WWJDService</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInstance()">getInstance</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="../model/dto/PassageResponse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">PassageResponse</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPassage(java.lang.String,java.lang.String,java.lang.String)">getPassage</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+          <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+          <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;passageId)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="../model/dto/SearchResponse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">SearchResponse</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#search(java.lang.String,java.lang.String,java.lang.String)">search</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
       <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
@@ -217,17 +231,47 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
                               <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;query)</pre>
 </li>
 </ul>
-<a id="bible(java.lang.String,java.lang.String)">
+<a id="getBooks(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>bible</h4>
-<pre class="methodSignature"><a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/GET.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@GET</a>("bible")
-<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="../model/dto/SearchResponse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">SearchResponse</a>&gt;&nbsp;bible&#8203;(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("Authorization")
-                             <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
-                             <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("api-key")
-                             <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey)</pre>
+<h4>getBooks</h4>
+<pre class="methodSignature"><a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/GET.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@GET</a>("books")
+<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/BookDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">BookDto</a>&gt;&gt;&nbsp;getBooks&#8203;(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("Authorization")
+                               <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+                               <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("api-key")
+                               <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey)</pre>
+</li>
+</ul>
+<a id="getChapters(java.lang.String,java.lang.String,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChapters</h4>
+<pre class="methodSignature"><a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/GET.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@GET</a>("books/{bookId}/chapters")
+<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/dto/ChapterDto.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">ChapterDto</a>&gt;&gt;&nbsp;getChapters&#8203;(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("Authorization")
+                                     <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+                                     <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("api-key")
+                                     <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+                                     <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Path.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Path</a>("bookId")
+                                     <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;bookId)</pre>
+</li>
+</ul>
+<a id="getPassage(java.lang.String,java.lang.String,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPassage</h4>
+<pre class="methodSignature"><a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/GET.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@GET</a>("passages/{passageId}")
+<a href="http://reactivex.io/RxJava/javadoc/io/reactivex/Single.html?is-external=true" title="class or interface in io.reactivex" class="externalLink">Single</a>&lt;<a href="../model/dto/PassageResponse.html" title="class in edu.cnm.deepdive.whatwouldjesusdo.model.dto">PassageResponse</a>&gt;&nbsp;getPassage&#8203;(<a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("Authorization")
+                                   <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;authHeader,
+                                   <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Header.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Header</a>("api-key")
+                                   <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+                                   <a href="https://square.github.io/retrofit/2.x/retrofit/retrofit2/http/Path.html?is-external=true" title="class or interface in retrofit2.http" class="externalLink">@Path</a>("passageId")
+                                   <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;passageId)</pre>
 </li>
 </ul>
 <a id="getInstance()">

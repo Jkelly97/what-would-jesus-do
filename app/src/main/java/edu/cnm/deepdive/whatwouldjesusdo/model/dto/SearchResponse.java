@@ -20,18 +20,18 @@ public class SearchResponse {
   public static class SearchData {
 
     @Expose
-    private List<Verse> verses;
+    private List<VerseDto> verses;
 
-    public List<Verse> getVerses() {
+    public List<VerseDto> getVerses() {
       return verses;
     }
 
     public void setVerses(
-        List<Verse> verses) {
+        List<VerseDto> verses) {
       this.verses = verses;
     }
 
-    public static class Verse {
+    public static class VerseDto {
 
       @Expose
       private String id;

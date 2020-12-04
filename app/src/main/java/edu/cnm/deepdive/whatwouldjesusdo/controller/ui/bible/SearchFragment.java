@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.whatwouldjesusdo.databinding.FragmentBibleBinding;
-import edu.cnm.deepdive.whatwouldjesusdo.model.dto.BookDto;
+import edu.cnm.deepdive.whatwouldjesusdo.databinding.FragmentSearchBinding;
+import edu.cnm.deepdive.whatwouldjesusdo.model.dto.SearchResponse.SearchData.VerseDto;
 import edu.cnm.deepdive.whatwouldjesusdo.viewmodel.MainViewModel;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,10 +19,10 @@ import org.jetbrains.annotations.NotNull;
  * A fragment representing the Bible itself. It applies the layout to the main activity resulting
  * in the bible screen in the application {@link edu.cnm.deepdive.whatwouldjesusdo.controller.MainActivity}.
  */
-public class BibleFragment extends Fragment {
+public class SearchFragment extends Fragment {
 
   private MainViewModel viewModel;
-  private FragmentBibleBinding binding;
+  private FragmentSearchBinding binding;
 
 
   /**
@@ -37,7 +37,9 @@ public class BibleFragment extends Fragment {
   public View onCreateView(@NonNull @NotNull LayoutInflater inflater,
        ViewGroup container,
       Bundle savedInstanceState) {
-    binding = FragmentBibleBinding.inflate(inflater, container, false);
+    binding = FragmentSearchBinding.inflate(inflater, container, false);
+    binding.searchButton.setOnClickListener((v) ->
+        viewModel.search(binding.searchText.getText().toString().trim()));
     return binding.getRoot();
   }
 
@@ -51,9 +53,9 @@ public class BibleFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-    viewModel.getBooks().observe(getViewLifecycleOwner(), (books) -> {
-      ArrayAdapter<BookDto> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, books);
-      binding.books.setAdapter(adapter);
+    viewModel.getResults().observe(getViewLifecycleOwner(), (verses) -> {
+      ArrayAdapter<VerseDto> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, verses);
+      binding.searchResults.setAdapter(adapter);
     });
     viewModel.getThrowable().observe(getViewLifecycleOwner(), (throwable) ->
         Toast.makeText(getContext(), throwable.getMessage(), Toast.LENGTH_LONG).show());
